@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border- box;
+}
+
+h1{
+    color: #1C518E;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+}
+
+h2{
+    color: #378FF8;
+    font-weight: 500;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+h3{
+    color: #1C518E;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+main {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(to right top, #4255FF, #85F7FF);
+    display: flex; /* flex는 수직으로 되어있는걸 옆으로 옮기는 역할 */
+    align-items: center;
+    justify-content: center;
+
+}
+/* display, align-items, justify-content는 glass를 가운데 넣기 위함 */
+.glass{
+    background: white;
+    min-height: 80vh;
+    width: 60%;   
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255, 0.7),
+         rgba(255,255,255, 0.3)
+    );
+    /*rgba는 투명도까지 설정 */
+    border-radius: 2rem;
+    z-index: 3; /*숫자가 클수록 앞에있게 됨*/
+    backdrop-filter: blur(2rem);
+    display: flex; /*div 분리용*/
+    
+}
+
+.circle1, 
+.circle2 {
+    background: white;
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255, 0.8),
+         rgba(255,255,255, 0.2)
+    );
+    height: 30rem;
+    width: 30rem;
+    position: absolute; /*원하는대로 움직일 수 있음 */
+    border-radius: 50%; /*원으로 만듬*/
+}
+
+.circle1{
+    top: 5%;
+    right: 15%;
+}
+.circle2{
+    bottom: 5%;
+    left: 10%;
+}
+
+.dashboard{
+    flex: 1; /* 최대한 공백을 많이 띄움 */
+    display: flex;
+    flex-direction: column; /* flex를 하고 column으로 하면 코드낭비 아닌가? 아니다 align-item 쓰려면 있어야됨 */
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255, 0.4),
+         rgba(255,255,255, 0.1)
+    );
+    border-radius: 2rem;
+}
+
+.user img{
+    width:30%;
+}
+
+.link img{
+    width:30%;
+}
+
+.pro img{
+    width:30%;
+}
+.user{
+    margin-top: 3rem;
+}
+
+.link{
+    display:flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+}
+.link h2{
+    padding: 0rem 2rem;
+    font-size: 1.5rem;
+}
+
+.games{
+    flex: 2; /* 최대한 공백을 많이 띄움 만약 2면 더띄움*/
+}
+
+.pro { 
+    background: linear-gradient(to right top, #4255FF, #85F7FF);
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+    margin: 2rem 2rem;
+    position: relative; /*proIm를 relative하게 움직일 수 있음*/
+}
+
+.pro img {
+
+    position:absolute;
+    top: 25%;
+    right: 10%;
+}
+
+.pro h2 {
+    width: 40%;
+    color: white;
+    font-weight: 600;
+}
+
+/*games*/
+.status{
+    margin-bottom: 3rem;
+}
+
+.status input{
+    background: linear-gradient(
+        to right bottom,
+         rgba(255,255,255, 0.8),
+         rgba(255,255,255, 0.2)
+    );
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+
+.games{
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card{
+    display: flex;
+    background: linear-gradient(
+        to left top, 
+        rgba(255,255,255,0.8), 
+        rgba(255,255,255,0.2)
+    );
+    border-radius : 2rem;
+    margin: 2rem 0rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122,122,122, 0.2);
+    justify-content: space-between;
+
+}
+
+.progress{
+    background: linear-gradient(to right top, #4255FF, #85F7FF);
+    width: 100%;
+    height: 25%;
+    border-radius: 1rem;
+    position: relative; /*after의 position absolute위치를 조정하기 위함. */
+    overflow: hidden;
+}
+
+.progress::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgb(236, 236, 236);
+    position: absolute;
+    left: 60%;
+}
+
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.percentage{
+    font-weight: bold;
+    background: linear-gradient(to right top, #4255FF, #85F7FF);
+    -webkit-background-clip: text; /*??*/
+    -webkit-text-fill-color: transparent;
+}
